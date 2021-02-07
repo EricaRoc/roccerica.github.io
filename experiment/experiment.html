@@ -46,8 +46,8 @@
 
     /* test trials */
     var test_stimuli = [
-      { stimulus: "img/blue.png", data: {test_part: 'test'} },
-      { stimulus: "img/orange.png", data: {test_part: 'test'} }
+      { stimulus: "img/blue.png"},
+      { stimulus: "img/orange.png"}
     ];
 
     var fixation = {
@@ -61,11 +61,9 @@
   }
 
     var test = {
-      type: 'image-button-response',
+      type: "image-button-response",
       stimulus: jsPsych.timelineVariable('stimulus'),
-      choices: ['1','2','3','4','5'],
-      data: jsPsych.timelineVariable('data')
-
+      choices: ['1','2','3','4','5']
     }
 
     var test_procedure = {

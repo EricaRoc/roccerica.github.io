@@ -44,9 +44,9 @@
     timeline.push(instructions);
 
     /* test trials */
-    /*var test_stimuli = [
+    var test_stimuli = [
       { stimulus: 'img/prova.mp4', data: {test_part: 'test'}},
-    ];*/
+    ];
 
     var fixation = {
       type: 'html-keyboard-response',
@@ -60,9 +60,10 @@
 
     var test = {
       type: 'video-button-response',
-      stimulus: ['img/prova.mp4'],
+      stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['1','2','3','4','5'],
-      /*data: jsPsych.timelineVariable('data')*/
+      data: jsPsych.timelineVariable('data')
+      autoplay: true
     }
 
     var test_procedure = {

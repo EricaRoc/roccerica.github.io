@@ -75,17 +75,17 @@
 
     timeline.push(test_procedure);
 
+    var video_trial = {
+    type: 'video',
+    stimulus: jsPsych.timelineVariable('stimulus')
+    }
+
     /* start the experiment */
     jsPsych.init({
       timeline: timeline,
       on_finish: function() {
         jsPsych.data.displayData();
       }
-
-      var video_trial = {
-    type: 'video',
-    stimulus: jsPsych.timelineVariable('stimulus')
-  }
 
     });
   </script>

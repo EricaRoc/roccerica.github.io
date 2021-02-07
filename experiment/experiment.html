@@ -73,22 +73,21 @@
       repetitions: 5
     }
 
-    var video_timline = {
+    var video = ['vid/sample_video.mp4', 'vid/prova.mp4'];
+
+    var video_timeline = {
     timeline: [
         {
             type: 'video',
             stimulus: jsPsych.timelineVariable('video')
         }
     ],
+
     timeline_variables: [
         {video: ['vid/sample_video.mp4']},
         {video: ['vid/prova.mp4']}
     ]
 }
-
-      var video = ['vid/sample_video.mp4', 'vid/prova.mp4'];
-
-
 
     timeline.push(test_procedure);
 

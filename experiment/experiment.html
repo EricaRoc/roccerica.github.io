@@ -24,7 +24,7 @@
     /* define instructions trial */
     var instructions = {
       type: "html-keyboard-response",
-      stimulus: "<p>In questo esperimento ti verranno mostrati diversi video di " +
+      stimulus: "<p> In questo esperimento ti verranno mostrati diversi video di " +
           "10 secondi ognuno.</p><p> Nei video sono presenti due nuvole di punti, " +
           "anche dette Point Cloud. </p> I Point Cloud sono rappresentazioni 3D " +
           "di diversi oggetti.</p><p> Nel video saranno presenti due Point Cloud: " +
@@ -58,7 +58,7 @@
   }
 
     var test = {
-      type: "image-keyboard-response",
+      type: "video-keyboard-response",
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['1','2','3','4','5'],
       data: jsPsych.timelineVariable('data')

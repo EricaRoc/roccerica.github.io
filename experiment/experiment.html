@@ -46,8 +46,8 @@
 
     /* test trials */
     var test_stimuli = [
-      { stimulus: "img/blue.png", data: {test_part: 'test'}},
-      { stimulus: "img/orange.png", data: {test_part: 'test'}}
+      { stimulus: "img/blue.png", data: {test_part: 'test'} },
+      { stimulus: "img/orange.png", data: {test_part: 'test'} }
     ];
 
     var fixation = {
@@ -64,7 +64,6 @@
       type: 'image-button-response',
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['1','2','3','4','5'],
-      autoplay: true,
       data: jsPsych.timelineVariable('data')
 
     }

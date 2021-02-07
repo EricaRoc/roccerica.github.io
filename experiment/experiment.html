@@ -6,6 +6,7 @@
     <script src="jspsych-6.2.0/plugins/jspsych-html-keyboard-response.js"></script>
     <script src="jspsych-6.2.0/plugins/jspsych-image-keyboard-response.js"></script>
     <script src="jspsych-6.2.0/plugins/jspsych-video-keyboard-response.js"></script>
+    <script src="jspsych-6.2.0/plugins/jspsych-image-keyboard-response.js"></script>
     <script src="jspsych-6.2.0/plugins/jspsych-video-button-response.js"></script>
     <link href="jspsych-6.2.0/css/jspsych.css" rel="stylesheet" type="text/css">
   </head>
@@ -45,7 +46,7 @@
 
     /* test trials */
     var test_stimuli = [
-      { stimulus: 'img/prova.mp4', data: {test_part: 'test'}},
+      { stimulus: 'img/blue.png', data: {test_part: 'test'}},
     ];
 
     var fixation = {
@@ -59,7 +60,7 @@
   }
 
     var test = {
-      type: 'video-button-response',
+      type: 'image-button-response',
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['1','2','3','4','5'],
       autoplay: true,

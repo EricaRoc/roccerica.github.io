@@ -5,6 +5,7 @@
     <script src="jspsych-6.2.0/jspsych.js"></script>
     <script src="jspsych-6.2.0/plugins/jspsych-html-keyboard-response.js"></script>
     <script src="jspsych-6.2.0/plugins/jspsych-image-keyboard-response.js"></script>
+    <script src="jspsych-6.2.0/plugins/jspsych-video-keyboard-response.js"></script>
     <link href="jspsych-6.2.0/css/jspsych.css" rel="stylesheet" type="text/css">
   </head>
   <body></body>
@@ -23,19 +24,19 @@
     /* define instructions trial */
     var instructions = {
       type: "html-keyboard-response",
-      stimulus: "<p>In questo esperimento ti verranno mostrati diversi video di" +
-          "10 secondi ognuno.</p><p> Nei video sono presenti due nuvole di punti," +
-          "anche dette Point Cloud. </p> I Point Cloud sono rappresentazioni 3D" +
+      stimulus: "<p>In questo esperimento ti verranno mostrati diversi video di " +
+          "10 secondi ognuno.</p><p> Nei video sono presenti due nuvole di punti, " +
+          "anche dette Point Cloud. </p> I Point Cloud sono rappresentazioni 3D " +
           "di diversi oggetti.</p><p> Nel video saranno presenti due Point Cloud: " +
           "l'originale e una sua versione con delle distorsioni.</p>" +
-          "<p> Il tuo compito è di dare un voto di quanto riesci a vedere la distorsione" +
-          "su una scala che va da 1 a 5. Dove: </p>" +
+          "<p> Il tuo compito è di dare un voto di quanto riesci a vedere la distorsione " +
+          "su una scala che va da 1 a 5: </p>" +
           "<p> 1 : <strong> impercettibile </strong> </p>" +
           "<p> 2 : <strong> lo vedo se guardo attentamente </strong> </p>" +
           "<p> 3 : <strong> vedo qualcosa ma non sono sicuro </strong> </p>" +
           "<p> 4 : <strong> vedo una distorsione </strong> </p>" +
           "<p> 5 : <strong>  si nota </strong> </p>" +
-          "<p>L'esperimento inizierà con una sessione di prova, per poi a seguire" +
+          "<p>Si inizierà con una sessione di prova, per poi a seguire " +
           "l'esperimento. </p> <p> Premi un qualsiasi tasto per iniziare </p>",
       post_trial_gap: 2000
     };

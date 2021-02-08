@@ -43,6 +43,9 @@
     };
     timeline.push(instructions);
 
+    var subject_id = jsPsych.randomization.randomID(15);
+
+
   var fixation = {
       type: 'html-keyboard-response',
       stimulus: '<div style="font-size:60px;">+</div>',
@@ -75,16 +78,25 @@
 
     timeline.push(test_procedure);
 
+    jsPsych.data.addProperties({
+      subject: subject_id,
+    });
 
+    function saveData(name, data) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'storage.php'); // 'write_data.php' is the path to the php file described above.
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({filename: name, filedata: data}));
+}
 
     /* start the experiment */
     jsPsych.init({
       timeline: timeline,
       on_finish: function() {
         jsPsych.data.displayData();
+        saveData(subject_id, jsPsych.data.get().csv());
       }
+});
 
-
-    });
   </script>
   </html>

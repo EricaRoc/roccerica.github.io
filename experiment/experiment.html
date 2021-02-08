@@ -46,8 +46,8 @@
 
     /*test trials*/
     var test_stimuli = [
-      { stimulus: '~/vid/sample_video.mp4' },
-      { stimulus: '~/vid/prova.mp4' }
+      { stimulus: "vid/sample_video.mp4"},
+      { stimulus: "vid/prova.mp4"}
     ];
 
     var fixation = {
@@ -76,10 +76,7 @@
 
     timeline.push(test_procedure);
 
-    var video_trial = {
-    type: 'video',
-    stimulus: jsPsych.timelineVariable('stimulus'),
-}
+
 
     /* start the experiment */
     jsPsych.init({
@@ -87,6 +84,11 @@
       on_finish: function() {
         jsPsych.data.displayData();
       }
+
+      var video_trial = {
+      type: 'video',
+      stimulus: jsPsych.timelineVariable('stimulus'),
+  }
 
     });
   </script>

@@ -44,12 +44,7 @@
     };
     timeline.push(instructions);
 
-    /*test trials
-    var test_stimuli = [
-      { stimulus: "vid/sample_video.mp4"},
-    ];*/
-
-    var fixation = {
+  var fixation = {
       type: 'html-keyboard-response',
       stimulus: '<div style="font-size:60px;">+</div>',
       choices: jsPsych.NO_KEYS,
@@ -59,27 +54,49 @@
     data: {test_part: 'fixation'}
   }
 
-    var prova_test = {
+  /*test trials*/
+  var test_stimuli = [
+    { stimulus: "vid/sample_video.mp4"},
+    { stimulus: "vid/prova.mp4"}
+  ];
+
+  var test = {
+    type: 'video-button-response' ,
+    stimulus: jsPsych.timelineVariable('stimulus'),
+    choices: ['1','2','3','4','5'],
+    width: 640
+  }
+
+  var test_procedure = {
+    timeline: [fixation, test],
+    timeline_variables: test_stimuli,
+    randomize_order : true,
+    repetitions: 5
+  }
+
+    /*var prova_test = {
       type: 'video-button-response' ,
       stimulus: ['vid/prova.mp4'],
       choices: ['1','2','3','4','5'],
       width: 640
-    }
+    }*/
 
-    var sample_test = {
+    /*var sample_test = {
       type: 'video-button-response' ,
       stimulus: ['vid/sample_video.mp4'],
       choices: ['1','2','3','4','5'],
       width: 640
-    }
+    }*/
 
 
-    var test_procedure = {
+    /* var test_procedure = {
       timeline: [fixation, prova_test, sample_test],
-      /*timeline_variables: test_stimuli,*/
+      /*timeline_variables: test_stimuli,
       randomize_order : true,
       repetitions: 5
-    }
+    } */
+
+
 
     /*var video_trial = {
           type: 'video',

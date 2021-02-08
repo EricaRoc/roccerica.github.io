@@ -74,12 +74,14 @@
       repetitions: 5
     }
 
-    timeline.push(test_procedure);
-
-          var video_trial = {
+    var video_trial = {
           type: 'video',
           stimulus: jsPsych.timelineVariable('stimulus'),
-      }
+      };
+
+
+    timeline.push(test_procedure);
+
 
 
     /* start the experiment */

@@ -44,10 +44,10 @@
     };
     timeline.push(instructions);
 
-    /*test trials*/
+    /*test trials
     var test_stimuli = [
       { stimulus: "vid/sample_video.mp4"},
-    ];
+    ];*/
 
     var fixation = {
       type: 'html-keyboard-response',
@@ -61,21 +61,22 @@
 
     var test = {
       type: 'video-keyboard-response' ,
-      stimulus: jsPsych.timelineVariable('stimulus'),
-      choices: ['1','2','3','4','5']
+      stimulus: ['vid/sample_video.mp4'],
+      choices: ['1','2','3','4','5'],
+      width: 640
 
     }
 
     var test_procedure = {
       timeline: [fixation, test],
-      timeline_variables: test_stimuli,
+      /*timeline_variables: test_stimuli,*/
       randomize_order : true,
       repetitions: 5
     }
 
     var video_trial = {
           type: 'video',
-          stimulus: jsPsych.timelineVariable('stimulus'),
+          stimulus: ['vid/sample_video.mp4'],,
       };
 
 

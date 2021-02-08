@@ -59,15 +59,23 @@
     data: {test_part: 'fixation'}
   }
 
-    var test = {
+    var prova_test = {
       type: 'video-keyboard-response' ,
       stimulus: ['vid/prova.mp4'],
       choices: ['1','2','3','4','5'],
       width: 640
     }
 
+    var sample_test = {
+      type: 'video-keyboard-response' ,
+      stimulus: ['vid/sample_video.mp4'],
+      choices: ['1','2','3','4','5'],
+      width: 640
+    }
+
+
     var test_procedure = {
-      timeline: [fixation, test],
+      timeline: [fixation, prova_test, sample_test],
       /*timeline_variables: test_stimuli,*/
       randomize_order : true,
       repetitions: 5
